@@ -1,6 +1,5 @@
 # TODO
-- Add all our card info to the layout
-- Add icons and color to cards
+- Add icons and color to cards (particularly for stats)
 - Pick out icons on Game-icons.net
-- Figure out game-icons implementation that doesn't require hard-coding
 - Make card back png for TTS
+- Figure out string interpolation from arrays (so we can have a typeline that reads (Type - Subtype) instead of two different layout areas)

@@ -1,0 +1,102 @@
+# adapting from the built-in layout "fantasy.yml"
+title:
+  x: 90
+  y: 90
+  width: 500
+  height: 50
+
+upper_right:
+  x: 595
+  y: 90
+  width: 135
+  height: 50
+  align: right
+ur: # alias
+  extends: upper_right
+
+art:
+  x: 75
+  y: 150
+  width: 675
+  height: 520
+
+type:
+  x: 90
+  y: 675
+  width: 150
+  height: 50
+  font_size: 8
+
+subtype:
+  extends: type
+  x: += 175
+  width: 300
+  
+
+description:
+  x: 100
+  y: 730
+  width: 625
+  height: 275
+  valign: middle
+  align: center
+  font_size: 6
+desc: # alias
+  extends: description
+
+lower:
+  y: 950
+  width: 75
+  height: 75
+  font_size: 10
+  valign: bottom
+lower_right:
+  extends: lower
+  x: 650
+  align: right
+lr: #alias
+  extends: lower_right
+lower_center:
+  extends: lower
+  x: 400
+  aligh: center
+lc: #alias
+  extends: lower_center
+lower_left:
+  extends: lower
+  x: 100
+  align: left
+ll: # alias
+  extends: lower_left
+
+copyright:
+  x: 75
+  y: 1025
+  width: 675
+  height: 25
+  font_size: 5
+  align: center
+  valign: bottom
+#aliases for copyright
+copy:
+  extends: copyright
+credit:
+  extends: copyright
+credits:
+  extends: copyright
+
+# The "cut line", without rounded corners
+cut:
+  x: 37.5
+  y: 37.5
+  width: 750
+  height: 1050
+
+# The "safe zone" as defined by TheGameCrafter poker cards
+safe:
+  x: 75
+  y: 75
+  width: 675
+  height: 975
+  radius: 16
+  dash: 3 3
