@@ -4,9 +4,12 @@ require 'game_icons'
 
 # Open the google sheet
 google_sheet_id = "1bTajO_mbHerEMDwGkJEBR-lDXm1hIUlSEe9IwY4hSDo"
-sheet_gid = "0"
+sheet_gid = "485063015"
 buffer = URI.open("https://docs.google.com/spreadsheets/d/#{google_sheet_id}/export?format=csv&gid=#{sheet_gid}").read
 data = Squib.csv data: buffer
+
+# Use 'map' operation to convert array of icon names to array of svgs
+illustrations = data['Icon'].map { |iconName| GameIcons.get(iconName).file }
 
 # Squib merges an array of layouts in sequential order.
 # For now we're grafting onto economy, but eventually we should make our own.
@@ -20,6 +23,7 @@ Squib::Deck.new cards: data['Name'].size, layout: layouts do
   text str: data['Name'], layout: 'title'
   text str: data['Text'], layout: 'description'
   text str: Time.now, layout: 'credits'
-  svg layout: data['Type'] # from layout.yml
+  svg layout: 'Type', file: illustrations # Spreadsheet-defined icons
+  #svg layout: data['Type'] # Layout-defined icons
   save_sheet columns: 4, rows: 4, margin: 0, gap: 0
 end
