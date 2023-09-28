@@ -69,6 +69,25 @@ lower_left:
 ll: # alias
   extends: lower_left
 
+lower_icon:
+  y: 950
+  width: 75
+  height: 75
+  font_size: 10
+  valign: bottom
+lower_icon_right:
+  extends: lower
+  x: 650
+  align: right
+lower_icon_center:
+  extends: lower
+  x: 400
+  aligh: center
+lower_icon_left:
+  extends: lower
+  x: 100
+  align: left
+
 copyright:
   x: 75
   y: 1025

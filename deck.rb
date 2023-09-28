@@ -33,10 +33,37 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
   text str: data['Type'], layout: 'type'
   text str: data['Subtype'], layout: 'subtype'
   text str: data['Text'], layout: 'description'
+
+  icon = data['Type'].map do |type|
+    case type
+      when 'Unit' then GameIcons.get('lorc/plain-dagger').recolor(fg: '555', bg: 'fff').string
+      else nil
+    end
+  end
+
+  svg layout: 'lower_icon_left', data: icon
   text str: data['Power'], layout: 'lower_left'
+
+  icon = data['Type'].map do |type|
+    case type
+      when 'Unit' then GameIcons.get('lorc/semi-closed-eye').recolor(fg: '555', bg: 'fff').string
+      else nil
+    end
+  end
+
+  svg layout: 'lower_icon_center', data: icon
   text str: data['Insight'], layout: 'lower_center'
+
+  icon = data['Type'].map do |type|
+    case type
+      when 'Unit' then GameIcons.get('skoll/hearts').recolor(fg: '555', bg: 'fff').string
+      else nil
+    end
+  end
+
+  svg layout: 'lower_icon_right', data: icon
   text str: data['Toughness'], layout: 'lower_right'
   text str: Time.now, layout: 'credits'
   svg layout: 'art', data: colorizedIllustrations # Spreadsheet-defined icons
-  save_sheet columns: 4, rows: 4, margin: 0, gap: 0
+  save_sheet columns: 9, rows: 7, margin: 0, gap: 0
 end
