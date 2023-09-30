@@ -50,24 +50,16 @@ lower:
   height: 75
   font_size: 10
   valign: bottom
+  align: center
 lower_right:
   extends: lower
   x: 650
-  align: right
-lr: #alias
-  extends: lower_right
 lower_center:
   extends: lower
   x: 400
-  aligh: center
-lc: #alias
-  extends: lower_center
 lower_left:
   extends: lower
   x: 100
-  align: left
-ll: # alias
-  extends: lower_left
 
 lower_icon:
   y: 950
