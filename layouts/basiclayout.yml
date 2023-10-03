@@ -23,13 +23,13 @@ art:
 type:
   x: 90
   y: 675
-  width: 150
+  width: 200
   height: 50
   font_size: 8
 
 subtype:
   extends: type
-  x: += 175
+  x: += 225
   width: 300
   
 
@@ -49,7 +49,7 @@ lower:
   width: 75
   height: 75
   font_size: 10
-  valign: bottom
+  valign: middle
   align: center
 lower_right:
   extends: lower

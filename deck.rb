@@ -30,13 +30,13 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
   rect layout: 'safe' # safe zone as defined by TheGameCrafter
   text str: data['Name'], layout: 'title'
   text str: data['Cost'], layout: 'upper_right'
+  text str: data['Text'], layout: 'description'
   text str: data['Type'], layout: 'type'
   text str: data['Subtype'], layout: 'subtype'
-  text str: data['Text'], layout: 'description'
 
   icon = data['Type'].map do |type|
     case type
-      when 'Unit' then GameIcons.get('lorc/plain-dagger').recolor(fg: '777', bg: 'fff').string
+      when 'Unit' then GameIcons.get('lorc/plain-dagger').recolor(fg: '999', bg: 'fff').string
       else nil
     end
   end
@@ -46,7 +46,7 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
 
   icon = data['Type'].map do |type|
     case type
-      when 'Unit' then GameIcons.get('skoll/hearts').recolor(fg: '777', bg: 'fff').string
+      when 'Unit', 'Cult Leader' then GameIcons.get('skoll/hearts').recolor(fg: '999', bg: 'fff').string
       else nil
     end
   end
@@ -56,7 +56,7 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
 
   icon = data['Type'].map do |type|
     case type
-      when 'Unit' then GameIcons.get('lorc/semi-closed-eye').recolor(fg: '777', bg: 'fff').string
+      when 'Unit', 'Cult Leader' then GameIcons.get('lorc/semi-closed-eye').recolor(fg: '999', bg: 'fff').string
       else nil
     end
   end
@@ -66,5 +66,5 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
 
   text str: Time.now, layout: 'credits'
   svg layout: 'art', data: colorizedIllustrations # Spreadsheet-defined icons
-  save_sheet columns: 9, rows: 7, margin: 0, gap: 0
+  save_sheet columns: 10, rows: 7, margin: 0, gap: 0
 end
