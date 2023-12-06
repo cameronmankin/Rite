@@ -66,5 +66,5 @@ Squib::Deck.new cards: data['Name'].size, layout: 'layouts/basiclayout.yml' do
 
   text str: Time.now, layout: 'credits'
   svg layout: 'art', data: colorizedIllustrations # Spreadsheet-defined icons
-  save_sheet columns: 10, rows: 7, margin: 0, gap: 0
+  save_sheet columns: 4, rows: 4, margin: 0, gap: 0
 end

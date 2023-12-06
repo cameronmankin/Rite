@@ -7,5 +7,8 @@
 ## Cards
 - Abilities for cult leaders
 - Locations cards (vision design and what zone they enter play from)
-- 3+ Taunt units for each color.
+- Flash blocker
 - Mechanics matrix
+## Playtest
+- "What if you never paid a favor cost?"
+- Update rules text such that we could give it to a prospective playtester and let them review it.
